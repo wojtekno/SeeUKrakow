@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">SeeUKrakow</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="wawels_dragon">Smok Wawelski</string>
+    <string name="wawels_dragon_desc">Legendarne stworzenie....</string>
+    <string name="wawel_castle_desc">Old castle of Kings</string>
+    <string name="wawel_castle">Wawel castle</string>
 </resources>
