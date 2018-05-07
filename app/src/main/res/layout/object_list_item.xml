@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/photo_image"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/smok_ic"/>
+
+    <TextView
+        android:id="@+id/place_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Smok Wawelski"/>
+
+    <ImageView
+        android:id="@+id/play_ic_"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/smok_ic"/>
+
+</LinearLayout>
