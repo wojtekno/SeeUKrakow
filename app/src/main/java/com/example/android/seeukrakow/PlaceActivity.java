@@ -10,17 +10,19 @@ public class PlaceActivity extends AppCompatActivity {
     ImageView placePicture;
     TextView placeNameTV;
     TextView placeDescTV;
+    Place currentPlace;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_place);
+currentPlace = getIntent().getParcelableExtra("Place");
 
         placeNameTV = findViewById(R.id.place_name_tv);
-        placeNameTV.setText("This is the place name");
+        placeNameTV.setText(currentPlace.getPlaceName());
 
         placeDescTV = findViewById(R.id.place_descritpion_tv);
-        placeDescTV.setText("This is desc");
+        placeDescTV.setText(currentPlace.getPlaceDescription());
 
     }
 }

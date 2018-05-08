@@ -28,7 +28,7 @@ public class HistoryFragment extends Fragment {
                              Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.place_list, container, false);
 
-        ArrayList<Place> placesList = new ArrayList<Place>();
+        final ArrayList<Place> placesList = new ArrayList<Place>();
         placesList.add(new Place(getString(R.string.wawel_castle), getString(R.string.wawel_castle_desc)));
 
 //        TextView description = (TextView) container.findViewById(R.id.place_name_tv);
@@ -40,7 +40,7 @@ public class HistoryFragment extends Fragment {
             public void onItemClick(int position) {
                 Toast.makeText(getContext(), "KLikam :)", Toast.LENGTH_LONG).show();
                 Intent i = new Intent(getContext(), PlaceActivity.class);
-//                i.putExtra()
+                i.putExtra("Place", placesList.get(position));
                 startActivity(i);
             }
         });
