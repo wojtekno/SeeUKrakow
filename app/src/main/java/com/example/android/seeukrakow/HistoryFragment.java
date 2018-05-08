@@ -1,6 +1,7 @@
 package com.example.android.seeukrakow;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -38,6 +39,9 @@ public class HistoryFragment extends Fragment {
             @Override
             public void onItemClick(int position) {
                 Toast.makeText(getContext(), "KLikam :)", Toast.LENGTH_LONG).show();
+                Intent i = new Intent(getContext(), PlaceActivity.class);
+//                i.putExtra()
+                startActivity(i);
             }
         });
         listView.setAdapter(placeAdapter);
