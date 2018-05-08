@@ -16,9 +16,9 @@ public class MyPagerAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         if(position ==0){
-            return new NatureFragment();
+            return  new HistoryFragment();
         } else {
-            return new HistoryFragment();
+            return new NatureFragment();
         }
     }
 
