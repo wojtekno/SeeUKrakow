@@ -48,6 +48,7 @@ public class PlaceAdapter extends ArrayAdapter<Place> {
     }
 
 
+
 }
 
  interface MyOnItemClickListener {

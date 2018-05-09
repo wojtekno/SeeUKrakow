@@ -26,4 +26,10 @@ public class MyPagerAdapter extends FragmentPagerAdapter {
     public int getCount() {
         return 2;
     }
+
+    //TODO make it to the StringRes
+    @Override
+    public CharSequence getPageTitle(int position) {
+       return "qq";
+    }
 }

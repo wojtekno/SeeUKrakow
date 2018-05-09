@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/container"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.seeukrakow.MainActivity"
-    android:orientation="vertical">
-<TextView
-    android:id="@+id/sample_tv"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content" />
-    <!--
-  <android.support.design.widget.TableLayout
+    android:orientation="vertical"
+    tools:context="com.example.android.seeukrakow.MainActivity">
+
+    <TextView
+        android:id="@+id/sample_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <android.support.design.widget.TableLayout
+        android:id="@+id/tab_layout"
+        app.tabMode="fixed"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>   -->
+        android:layout_height="wrap_content" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/main_pager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent" />
 
 </LinearLayout>
