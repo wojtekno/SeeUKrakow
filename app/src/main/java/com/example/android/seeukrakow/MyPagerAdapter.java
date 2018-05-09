@@ -1,5 +1,6 @@
 package com.example.android.seeukrakow;
 
+import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -9,8 +10,10 @@ import android.support.v4.app.FragmentPagerAdapter;
  */
 
 public class MyPagerAdapter extends FragmentPagerAdapter {
-    public MyPagerAdapter(FragmentManager fm) {
+    Context mcontext;
+    public MyPagerAdapter(FragmentManager fm, Context context) {
         super(fm);
+        mcontext = context;
     }
 
     @Override
@@ -30,6 +33,9 @@ public class MyPagerAdapter extends FragmentPagerAdapter {
     //TODO make it to the StringRes
     @Override
     public CharSequence getPageTitle(int position) {
-       return "qq";
-    }
+        if(position ==0){
+            return  mcontext.getString(R.string.tab_history);
+        } else {
+            return mcontext.getString(R.string.tab_nature);
+        }    }
 }

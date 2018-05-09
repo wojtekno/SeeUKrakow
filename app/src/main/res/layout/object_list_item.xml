@@ -12,7 +12,8 @@
         android:id="@+id/place_name_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Smok Wawelski"/>
+        android:text="Smok Wawelski"
+        android:textSize="24sp"/>
 
     <ImageView
         android:id="@+id/play_ic_"
