@@ -1,24 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical">
 
     <ImageView
         android:id="@+id/photo_image"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:src="@drawable/smok_ic"/>
+        android:layout_width="@dimen/icon_width"
+        android:layout_height="@dimen/icon_width"
+        android:src="@drawable/smok_wawelski_photo"
+        android:scaleType="centerCrop"/>
 
     <TextView
         android:id="@+id/place_name_tv"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingLeft="16dp"
         android:text="Smok Wawelski"
-        android:textSize="24sp"/>
+        android:textSize="24sp" />
 
     <ImageView
         android:id="@+id/play_ic_"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:src="@drawable/smok_ic"/>
+        android:layout_width="@dimen/icon_width"
+        android:layout_height="@dimen/icon_width"
+        android:src="@drawable/smok_ic" />
 
 </LinearLayout>

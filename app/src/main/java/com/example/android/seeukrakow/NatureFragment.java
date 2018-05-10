@@ -28,7 +28,7 @@ public class NatureFragment extends Fragment {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.place_list, container, false);
 
         ArrayList<Place> placesList = new ArrayList<Place>();
-        placesList.add(new Place(getString(R.string.wawels_dragon), getString(R.string.wawels_dragon_desc)));
+        placesList.add(new Place(getString(R.string.wawels_dragon), getString(R.string.wawels_dragon_desc), R.drawable.smok_wawelski_photo));
 
 //        TextView description = (TextView) container.findViewById(R.id.place_name_tv);
 //        description.setText(placesList.get(0).getPlaceName());
