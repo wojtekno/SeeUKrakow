@@ -28,7 +28,7 @@ public class SongsFragment extends Fragment {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.place_list, container, false);
 
         final ArrayList<Place> placesList = new ArrayList<Place>();
-        placesList.add(new Place("Krakow - Myslovitz", "Persona can sees her beloved everywhere...", R.drawable.golebia_photo_small));
+        placesList.add(new Place("Krakow - Myslovitz", "Persona can sees her beloved everywhere...", R.drawable.golebia_photo));
 
 //        TextView description = (TextView) container.findViewById(R.id.place_name_tv);
 //        description.setText(placesList.get(0).getPlaceName());
