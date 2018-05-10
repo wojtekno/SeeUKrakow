@@ -14,10 +14,10 @@ import java.util.ArrayList;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class NatureFragment extends Fragment {
+public class SongsFragment extends Fragment {
 
 
-    public NatureFragment() {
+    public SongsFragment() {
         // Required empty public constructor
     }
 
@@ -28,7 +28,7 @@ public class NatureFragment extends Fragment {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.place_list, container, false);
 
         final ArrayList<Place> placesList = new ArrayList<Place>();
-        placesList.add(new Place(getString(R.string.wawels_dragon), getString(R.string.wawels_dragon_desc), R.drawable.smok_wawelski_photo));
+        placesList.add(new Place("Krakow - Myslovitz", "Persona can sees her beloved everywhere...", R.drawable.golebia_photo_small));
 
 //        TextView description = (TextView) container.findViewById(R.id.place_name_tv);
 //        description.setText(placesList.get(0).getPlaceName());
@@ -37,13 +37,14 @@ public class NatureFragment extends Fragment {
         PlaceAdapter placeAdapter = new PlaceAdapter(getContext(), 0, placesList, new MyOnItemClickListener() {
             @Override
             public void onItemClick(int position) {
-//                Toast.makeText(getContext(), "akuku", Toast.LENGTH_LONG).show();
+//                Toast.makeText(getContext(), "KLikam :)", Toast.LENGTH_LONG).show();
                 Intent i = new Intent(getContext(), PlaceActivity.class);
                 i.putExtra("Place", placesList.get(position));
                 startActivity(i);
             }
         });
         listView.setAdapter(placeAdapter);
+
 
 
         return rootView;

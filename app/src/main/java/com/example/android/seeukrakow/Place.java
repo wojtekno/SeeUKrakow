@@ -3,6 +3,8 @@ package com.example.android.seeukrakow;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.google.android.gms.maps.model.LatLng;
+
 /**
  * Created by Wojtek on 5/8/2018.
  */
@@ -13,6 +15,7 @@ public class Place implements Parcelable {
     private String placeDescription;
     private int imageResId;
     private int audioResId;
+    private LatLng coordinates;
 
     public Place (String placeName, String placeDescription) {
         this.placeDescription = placeDescription;
@@ -23,6 +26,14 @@ public class Place implements Parcelable {
         this.placeDescription = placeDescription;
         this.placeName = placeName;
         this.imageResId = imageResId;
+    }
+
+
+    public Place (String placeName, String placeDescription, int imageResId, LatLng coordinates) {
+        this.placeDescription = placeDescription;
+        this.placeName = placeName;
+        this.imageResId = imageResId;
+        this.coordinates = coordinates;
     }
 
     public Place (String placeName, String placeDescription, int imageResId, int audioResId) {
@@ -66,6 +77,10 @@ public class Place implements Parcelable {
 
     public int getAudioResId() {
         return audioResId;
+    }
+
+    public LatLng getCoordinates() {
+        return coordinates;
     }
 
     @Override

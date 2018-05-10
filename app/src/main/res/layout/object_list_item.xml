@@ -6,10 +6,10 @@
 
     <ImageView
         android:id="@+id/photo_image"
-        android:layout_width="@dimen/icon_width"
-        android:layout_height="@dimen/icon_width"
-        android:src="@drawable/smok_wawelski_photo"
-        android:scaleType="centerCrop"/>
+        android:layout_width="@dimen/icon_dimen"
+        android:layout_height="@dimen/icon_dimen"
+        android:src="@drawable/krakow_herb"
+        android:scaleType="fitXY"/>
 
     <TextView
         android:id="@+id/place_name_tv"
@@ -22,8 +22,8 @@
 
     <ImageView
         android:id="@+id/play_ic_"
-        android:layout_width="@dimen/icon_width"
-        android:layout_height="@dimen/icon_width"
+        android:layout_width="@dimen/icon_dimen"
+        android:layout_height="@dimen/icon_dimen"
         android:src="@drawable/smok_ic" />
 
 </LinearLayout>
