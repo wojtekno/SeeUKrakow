@@ -16,6 +16,7 @@ public class Place implements Parcelable {
     private int imageResId;
     private int audioResId;
     private LatLng coordinates;
+    private String videoId;
 
     public Place (String placeName, String placeDescription) {
         this.placeDescription = placeDescription;
@@ -28,6 +29,12 @@ public class Place implements Parcelable {
         this.imageResId = imageResId;
     }
 
+    public Place (String placeName, String placeDescription, int imageResId, String videoId) {
+        this.placeDescription = placeDescription;
+        this.placeName = placeName;
+        this.imageResId = imageResId;
+        this.videoId = videoId;
+    }
 
     public Place (String placeName, String placeDescription, int imageResId, LatLng coordinates) {
         this.placeDescription = placeDescription;
@@ -36,12 +43,14 @@ public class Place implements Parcelable {
         this.coordinates = coordinates;
     }
 
-    public Place (String placeName, String placeDescription, int imageResId, int audioResId) {
+    public Place (String placeName, String placeDescription, int imageResId, String videoId, LatLng coordinates) {
         this.placeDescription = placeDescription;
         this.placeName = placeName;
         this.imageResId = imageResId;
-        this.audioResId = audioResId;
+        this.coordinates = coordinates;
+        this.videoId = videoId;
     }
+
 
 
     protected Place(Parcel in) {
@@ -50,6 +59,7 @@ public class Place implements Parcelable {
         imageResId = in.readInt();
         audioResId = in.readInt();
         coordinates = in.readParcelable(LatLng.class.getClassLoader());
+        videoId = in.readString();
     }
 
     public static final Creator<Place> CREATOR = new Creator<Place>() {
@@ -89,6 +99,10 @@ public class Place implements Parcelable {
         return 0;
     }
 
+    public String getVideoId() {
+        return videoId;
+    }
+
     @Override
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeString(placeName);
@@ -96,5 +110,6 @@ public class Place implements Parcelable {
         parcel.writeInt(imageResId);
         parcel.writeInt(audioResId);
         parcel.writeParcelable(this.coordinates, i);
+        parcel.writeString(videoId);
     }
 }
