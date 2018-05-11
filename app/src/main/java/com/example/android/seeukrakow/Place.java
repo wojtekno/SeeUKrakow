@@ -49,6 +49,7 @@ public class Place implements Parcelable {
         placeDescription = in.readString();
         imageResId = in.readInt();
         audioResId = in.readInt();
+        coordinates = in.readParcelable(LatLng.class.getClassLoader());
     }
 
     public static final Creator<Place> CREATOR = new Creator<Place>() {
@@ -94,5 +95,6 @@ public class Place implements Parcelable {
         parcel.writeString(placeDescription);
         parcel.writeInt(imageResId);
         parcel.writeInt(audioResId);
+        parcel.writeParcelable(this.coordinates, i);
     }
 }

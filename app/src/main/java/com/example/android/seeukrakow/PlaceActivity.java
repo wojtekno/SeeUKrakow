@@ -2,6 +2,8 @@ package com.example.android.seeukrakow;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -38,13 +40,20 @@ public class PlaceActivity extends AppCompatActivity implements OnMapReadyCallba
         placeDescTV.setText(currentPlace.getPlaceDescription());
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.googlemap);
-        mapFragment.getMapAsync(this);
+        Log.v("PlaceAct", "currentPlace.getCoordinates: " + currentPlace.getCoordinates());
+        if (currentPlace.getCoordinates() != null) {
+            mapFragment.getView().setVisibility(View.VISIBLE);
+            mapFragment.getMapAsync(this);
+        } else {
+            mapFragment.getView().setVisibility(View.GONE);
+        }
+
     }
 
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        LatLng point = new LatLng(50.053078, 19.933596);
+        LatLng point = currentPlace.getCoordinates();
         googleMap.addMarker(new MarkerOptions().position(point).title("here we are"));
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(point, 14));
     }

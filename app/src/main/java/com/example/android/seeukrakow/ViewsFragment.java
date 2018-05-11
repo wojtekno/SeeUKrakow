@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
+import com.google.android.gms.maps.model.LatLng;
+
 import java.util.ArrayList;
 
 /**
@@ -28,7 +30,10 @@ public class ViewsFragment extends Fragment {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.place_list, container, false);
 
         final ArrayList<Place> placesList = new ArrayList<Place>();
-        placesList.add(new Place(getString(R.string.wolski_forest_title), getString(R.string.wolski_forest_desc), R.drawable.las_photo_small));
+        placesList.add(new Place(getString(R.string.wawels_dragon), getString(R.string.wawels_dragon_desc), R.drawable.smok_photo, new LatLng(50.053078, 19.933596)));
+        placesList.add(new Place(getString(R.string.pilsudski_mound), getString(R.string.pilsudski_mound_desc), R.drawable.kopiec_pilsudskiego_photo));
+        placesList.add(new Place(getString(R.string.kraka_mound), getString(R.string.kraka_mound_desc), R.drawable.kopiec_kraka_photo_small));
+        placesList.add(new Place(getString(R.string.tyniec), getString(R.string.tyniec_desc), R.drawable.tyniec_photo));
 
 //        TextView description = (TextView) container.findViewById(R.id.place_name_tv);
 //        description.setText(placesList.get(0).getPlaceName());

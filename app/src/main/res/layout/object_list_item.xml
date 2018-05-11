@@ -8,8 +8,8 @@
         android:id="@+id/photo_image"
         android:layout_width="@dimen/icon_dimen"
         android:layout_height="@dimen/icon_dimen"
-        android:src="@drawable/krakow_herb"
-        android:scaleType="fitXY"/>
+        android:scaleType="fitXY"
+        android:src="@drawable/krakow_herb" />
 
     <TextView
         android:id="@+id/place_name_tv"
@@ -19,11 +19,5 @@
         android:paddingLeft="16dp"
         android:text="Smok Wawelski"
         android:textSize="24sp" />
-
-    <ImageView
-        android:id="@+id/play_ic_"
-        android:layout_width="@dimen/icon_dimen"
-        android:layout_height="@dimen/icon_dimen"
-        android:src="@drawable/smok_ic" />
 
 </LinearLayout>

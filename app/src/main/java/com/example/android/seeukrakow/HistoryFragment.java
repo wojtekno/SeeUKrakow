@@ -28,7 +28,11 @@ public class HistoryFragment extends Fragment {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.place_list, container, false);
 
         final ArrayList<Place> placesList = new ArrayList<Place>();
-        placesList.add(new Place(getString(R.string.wawel_castle), getString(R.string.wawel_castle_desc), R.drawable.krakow_herb));
+        placesList.add(new Place(getString(R.string.wawel_castle), getString(R.string.wawel_castle_desc), R.drawable.wawel_photo));
+        placesList.add(new Place(getString(R.string.mariacki_church), getString(R.string.mariacki_church_decs), R.drawable.mariacki_photo_small));
+        placesList.add(new Place(getString(R.string.wieliczka_salt_mine), getString(R.string.wieliczka_desc), R.drawable.wieliczka_photo));
+        placesList.add(new Place(getString(R.string.main_square), getString(R.string.main_square_desc), R.drawable.rynek_photo_small));
+        placesList.add(new Place(getString(R.string.wawels_dragon), getString(R.string.wawels_dragon_desc), R.drawable.smok_wawelski_photo));
 
 //        TextView description = (TextView) container.findViewById(R.id.place_name_tv);
 //        description.setText(placesList.get(0).getPlaceName());
@@ -44,7 +48,6 @@ public class HistoryFragment extends Fragment {
             }
         });
         listView.setAdapter(placeAdapter);
-
 
 
         return rootView;

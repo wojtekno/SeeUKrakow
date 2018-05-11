@@ -28,7 +28,11 @@ public class NatureFragment extends Fragment {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.place_list, container, false);
 
         final ArrayList<Place> placesList = new ArrayList<Place>();
-        placesList.add(new Place(getString(R.string.wawels_dragon), getString(R.string.wawels_dragon_desc), R.drawable.smok_wawelski_photo));
+
+        placesList.add(new Place(getString(R.string.wolski_forest_title), getString(R.string.wolski_forest_desc), R.drawable.las_photo_small));
+        placesList.add(new Place(getString(R.string.twardowski_complex), getString(R.string.twardowski_complex_desc), R.drawable.skalki_photo_small));
+        placesList.add(new Place(getString(R.string.blonia), getString(R.string.blonia_desc), R.drawable.blonia));
+
 
 //        TextView description = (TextView) container.findViewById(R.id.place_name_tv);
 //        description.setText(placesList.get(0).getPlaceName());

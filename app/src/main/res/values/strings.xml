@@ -14,4 +14,20 @@
     <string name="wolski_forest_desc">Big area of forest and hills</string>
     <string name="tab_views">Views</string>
     <string name="tab_songs">Songs</string>
+    <string name="mariacki_church">Mariacki church</string>
+    <string name="mariacki_church_decs">Old gothic church with two towers and a pretty scary tale about them</string>
+    <string name="wieliczka_salt_mine">Wieliczka salt mine</string>
+    <string name="wieliczka_desc">Old salt mine which came to Poland from hungary...</string>
+    <string name="main_square">Main square</string>
+    <string name="main_square_desc">Kakow\'s main square, centre place of social life in Krakow....</string>
+    <string name="twardowski_complex">Twardowski\'s complex</string>
+    <string name="twardowski_complex_desc">Complex of old rock mine fled with water and a beautiful rocks and forest</string>
+    <string name="blonia">Blonia</string>
+    <string name="blonia_desc">Big area of grass surrounded by trees</string>
+    <string name="pilsudski_mound">Pilsudski mound</string>
+    <string name="pilsudski_mound_desc">Beautiful place in the forest from where you can see...</string>
+    <string name="kraka_mound">Kraka mound</string>
+    <string name="kraka_mound_desc">Another charming site, with an awesome view and a good place to wander around</string>
+    <string name="tyniec">Tyniec monastery</string>
+    <string name="tyniec_desc">At the Vistula river you can find another historical place...</string>
 </resources>
