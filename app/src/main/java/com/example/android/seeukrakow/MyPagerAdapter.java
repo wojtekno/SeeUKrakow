@@ -5,10 +5,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-/**
- * Created by Wojtek on 5/8/2018.
- */
-
 public class MyPagerAdapter extends FragmentPagerAdapter {
     Context mcontext;
 
@@ -23,7 +19,7 @@ public class MyPagerAdapter extends FragmentPagerAdapter {
             return new HistoryFragment();
         } else if (position == 1) {
             return new NatureFragment();
-        } else if(position ==2){
+        } else if (position == 2) {
             return new ViewsFragment();
         } else {
             return new SongsFragment();
@@ -42,7 +38,7 @@ public class MyPagerAdapter extends FragmentPagerAdapter {
             return mcontext.getString(R.string.tab_history);
         } else if (position == 1) {
             return mcontext.getString(R.string.tab_nature);
-        } else if(position ==2) {
+        } else if (position == 2) {
             return mcontext.getString(R.string.tab_views);
         } else {
             return mcontext.getString(R.string.tab_songs);

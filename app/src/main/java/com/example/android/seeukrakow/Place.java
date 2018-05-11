@@ -14,50 +14,41 @@ public class Place implements Parcelable {
     private String placeName;
     private String placeDescription;
     private int imageResId;
-    private int audioResId;
     private LatLng coordinates;
     private String videoId;
 
-    public Place (String placeName, String placeDescription) {
-        this.placeDescription = placeDescription;
-        this.placeName = placeName;
-    }
-
-    public Place (String placeName, String placeDescription, int imageResId) {
+    public Place(String placeName, String placeDescription, int imageResId) {
         this.placeDescription = placeDescription;
         this.placeName = placeName;
         this.imageResId = imageResId;
     }
 
-    public Place (String placeName, String placeDescription, int imageResId, String videoId) {
+    public Place(String placeName, String placeDescription, int imageResId, String videoId) {
         this.placeDescription = placeDescription;
         this.placeName = placeName;
         this.imageResId = imageResId;
         this.videoId = videoId;
     }
 
-    public Place (String placeName, String placeDescription, int imageResId, LatLng coordinates) {
+    public Place(String placeName, String placeDescription, int imageResId, LatLng coordinates) {
         this.placeDescription = placeDescription;
         this.placeName = placeName;
         this.imageResId = imageResId;
         this.coordinates = coordinates;
     }
 
-    public Place (String placeName, String placeDescription, int imageResId, String videoId, LatLng coordinates) {
+    public Place(String placeName, String placeDescription, int imageResId, String videoId, LatLng coordinates) {
         this.placeDescription = placeDescription;
         this.placeName = placeName;
         this.imageResId = imageResId;
         this.coordinates = coordinates;
         this.videoId = videoId;
     }
-
-
 
     protected Place(Parcel in) {
         placeName = in.readString();
         placeDescription = in.readString();
         imageResId = in.readInt();
-        audioResId = in.readInt();
         coordinates = in.readParcelable(LatLng.class.getClassLoader());
         videoId = in.readString();
     }
@@ -86,10 +77,6 @@ public class Place implements Parcelable {
         return imageResId;
     }
 
-    public int getAudioResId() {
-        return audioResId;
-    }
-
     public LatLng getCoordinates() {
         return coordinates;
     }
@@ -108,8 +95,7 @@ public class Place implements Parcelable {
         parcel.writeString(placeName);
         parcel.writeString(placeDescription);
         parcel.writeInt(imageResId);
-        parcel.writeInt(audioResId);
-        parcel.writeParcelable(this.coordinates, i);
+        parcel.writeParcelable(coordinates, i);
         parcel.writeString(videoId);
     }
 }

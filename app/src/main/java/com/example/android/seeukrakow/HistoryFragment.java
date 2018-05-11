@@ -16,11 +16,8 @@ import java.util.ArrayList;
  */
 public class HistoryFragment extends Fragment {
 
-
     public HistoryFragment() {
-        // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -34,21 +31,16 @@ public class HistoryFragment extends Fragment {
         placesList.add(new Place(getString(R.string.main_square), getString(R.string.main_square_desc), R.drawable.rynek_photo_small));
         placesList.add(new Place(getString(R.string.wawels_dragon), getString(R.string.wawels_dragon_desc), R.drawable.smok_wawelski_photo));
 
-//        TextView description = (TextView) container.findViewById(R.id.place_name_tv);
-//        description.setText(placesList.get(0).getPlaceName());
-
         ListView listView = (ListView) rootView.findViewById(R.id.place_list_lv);
         PlaceAdapter placeAdapter = new PlaceAdapter(getContext(), 0, placesList, new MyOnItemClickListener() {
             @Override
             public void onItemClick(int position) {
-//                Toast.makeText(getContext(), "KLikam :)", Toast.LENGTH_LONG).show();
                 Intent i = new Intent(getContext(), PlaceActivity.class);
                 i.putExtra("Place", placesList.get(position));
                 startActivity(i);
             }
         });
         listView.setAdapter(placeAdapter);
-
 
         return rootView;
     }

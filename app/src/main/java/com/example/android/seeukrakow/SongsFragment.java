@@ -18,11 +18,8 @@ import java.util.ArrayList;
  */
 public class SongsFragment extends Fragment {
 
-
     public SongsFragment() {
-        // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -35,9 +32,6 @@ public class SongsFragment extends Fragment {
         placesList.add(new Place(getString(R.string.cracovia_anthem), getString(R.string.cracovia_anthem_desc), R.drawable.cracovia_photo, "https://www.youtube.com/watch?v=m7r9sywQJ1g&t=61s"));
         placesList.add(new Place(getString(R.string.wisla_anthem), getString(R.string.wisla_anthem_desc), R.drawable.wisla_stadion_photo, "https://www.youtube.com/watch?v=4M0ClspalU8&t=10s"));
 
-//        TextView description = (TextView) container.findViewById(R.id.place_name_tv);
-//        description.setText(placesList.get(0).getPlaceName());
-
         ListView listView = (ListView) rootView.findViewById(R.id.place_list_lv);
         PlaceAdapter placeAdapter = new PlaceAdapter(getContext(), 0, placesList, new MyOnItemClickListener() {
             @Override
@@ -48,7 +42,6 @@ public class SongsFragment extends Fragment {
             }
         });
         listView.setAdapter(placeAdapter);
-
 
         return rootView;
     }

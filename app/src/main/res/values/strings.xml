@@ -26,7 +26,7 @@
     <string name="blonia_desc">Big area of grass surrounded by trees</string>
     <string name="pilsudski_mound">Pilsudski mound</string>
     <string name="pilsudski_mound_desc">Beautiful place in the forest from where you can see...</string>
-    <string name="kraka_mound">Krak's mound</string>
+    <string name="kraka_mound">Krak\'s mound</string>
     <string name="kraka_mound_desc">Another charming site, with an awesome view and a good place to wander around</string>
     <string name="tyniec">Tyniec monastery</string>
     <string name="tyniec_desc">At the Vistula river you can find another historical place...</string>
@@ -37,5 +37,5 @@
     <string name="wisla_anthem">Wisla\'s anthem</string>
     <string name="wisla_anthem_desc">Anthem of Wisla sports club</string>
     <string name="krakow_myslovitz">Krakow - Myslovitz</string>
-    <string name="krakow_mysovitz_desc">Persona can sees her beloved everywhere...</string>
+    <string name="krakow_mysovitz_desc">Persona misses her beloved one and can sees her everywhere. ...</string>
 </resources>

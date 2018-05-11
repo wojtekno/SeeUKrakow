@@ -18,9 +18,7 @@ public class NatureFragment extends Fragment {
 
 
     public NatureFragment() {
-        // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -28,27 +26,20 @@ public class NatureFragment extends Fragment {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.place_list, container, false);
 
         final ArrayList<Place> placesList = new ArrayList<Place>();
-
         placesList.add(new Place(getString(R.string.wolski_forest_title), getString(R.string.wolski_forest_desc), R.drawable.las_photo_small));
         placesList.add(new Place(getString(R.string.twardowski_complex), getString(R.string.twardowski_complex_desc), R.drawable.skalki_photo_small));
         placesList.add(new Place(getString(R.string.blonia), getString(R.string.blonia_desc), R.drawable.blonia));
-
-
-//        TextView description = (TextView) container.findViewById(R.id.place_name_tv);
-//        description.setText(placesList.get(0).getPlaceName());
 
         ListView listView = (ListView) rootView.findViewById(R.id.place_list_lv);
         PlaceAdapter placeAdapter = new PlaceAdapter(getContext(), 0, placesList, new MyOnItemClickListener() {
             @Override
             public void onItemClick(int position) {
-//                Toast.makeText(getContext(), "akuku", Toast.LENGTH_LONG).show();
                 Intent i = new Intent(getContext(), PlaceActivity.class);
                 i.putExtra("Place", placesList.get(position));
                 startActivity(i);
             }
         });
         listView.setAdapter(placeAdapter);
-
 
         return rootView;
     }

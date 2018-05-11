@@ -18,9 +18,7 @@ import java.util.ArrayList;
  */
 public class ViewsFragment extends Fragment {
 
-
     public ViewsFragment() {
-        // Required empty public constructor
     }
 
 
@@ -35,22 +33,16 @@ public class ViewsFragment extends Fragment {
         placesList.add(new Place(getString(R.string.kraka_mound), getString(R.string.kraka_mound_desc), R.drawable.kopiec_kraka_photo_small, new LatLng(50.038068, 19.958397)));
         placesList.add(new Place(getString(R.string.tyniec), getString(R.string.tyniec_desc), R.drawable.tyniec_photo, new LatLng(50.018998, 19.802248)));
 
-//        TextView description = (TextView) container.findViewById(R.id.place_name_tv);
-//        description.setText(placesList.get(0).getPlaceName());
-
         ListView listView = (ListView) rootView.findViewById(R.id.place_list_lv);
         PlaceAdapter placeAdapter = new PlaceAdapter(getContext(), 0, placesList, new MyOnItemClickListener() {
             @Override
             public void onItemClick(int position) {
-//                Toast.makeText(getContext(), "KLikam :)", Toast.LENGTH_LONG).show();
                 Intent i = new Intent(getContext(), PlaceActivity.class);
                 i.putExtra("Place", placesList.get(position));
                 startActivity(i);
             }
         });
         listView.setAdapter(placeAdapter);
-
-
 
         return rootView;
     }
