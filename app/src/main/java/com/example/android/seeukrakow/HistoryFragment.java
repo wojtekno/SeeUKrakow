@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -32,15 +33,16 @@ public class HistoryFragment extends Fragment {
         placesList.add(new Place(getString(R.string.wawels_dragon), getString(R.string.wawels_dragon_desc), R.drawable.smok_wawelski_photo));
 
         ListView listView = (ListView) rootView.findViewById(R.id.place_list_lv);
-        PlaceAdapter placeAdapter = new PlaceAdapter(getContext(), 0, placesList, new MyOnItemClickListener() {
+        PlaceAdapter placeAdapter = new PlaceAdapter(getContext(), 0, placesList);
+        listView.setAdapter(placeAdapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(int position) {
-                Intent i = new Intent(getContext(), PlaceActivity.class);
-                i.putExtra("Place", placesList.get(position));
-                startActivity(i);
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(getContext(), PlaceActivity.class);
+                intent.putExtra("Place", placesList.get(i));
+                startActivity(intent);
             }
         });
-        listView.setAdapter(placeAdapter);
 
         return rootView;
     }

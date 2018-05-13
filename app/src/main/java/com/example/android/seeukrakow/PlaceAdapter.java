@@ -18,11 +18,8 @@ import java.util.List;
 
 public class PlaceAdapter extends ArrayAdapter<Place> {
 
-    MyOnItemClickListener callback;
-
-    public PlaceAdapter(@NonNull Context context, int resource, @NonNull List<Place> objects, MyOnItemClickListener myOnItemClickListener) {
+    public PlaceAdapter(@NonNull Context context, int resource, @NonNull List<Place> objects) {
         super(context, resource, objects);
-        this.callback = myOnItemClickListener;
     }
 
     @NonNull
@@ -37,14 +34,7 @@ public class PlaceAdapter extends ArrayAdapter<Place> {
 
         TextView descriptionTV = (TextView) convertView.findViewById(R.id.place_name_tv);
         descriptionTV.setText(currentPlace.getPlaceName());
-//        descriptionTV.setText("adapter");
 
-        descriptionTV.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                callback.onItemClick(position);
-            }
-        });
         if (currentPlace.getImageResId() != 0) {
             ImageView placeIcon = (ImageView) convertView.findViewById(R.id.photo_image);
             placeIcon.setImageResource(currentPlace.getImageResId());
@@ -52,9 +42,4 @@ public class PlaceAdapter extends ArrayAdapter<Place> {
         return convertView;
     }
 
-
-}
-
-interface MyOnItemClickListener {
-    void onItemClick(int position);
 }

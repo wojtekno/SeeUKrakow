@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.google.android.gms.maps.model.LatLng;
@@ -33,16 +34,16 @@ public class SongsFragment extends Fragment {
         placesList.add(new Place(getString(R.string.wisla_anthem), getString(R.string.wisla_anthem_desc), R.drawable.wisla_stadion_photo, "https://www.youtube.com/watch?v=4M0ClspalU8&t=10s"));
 
         ListView listView = (ListView) rootView.findViewById(R.id.place_list_lv);
-        PlaceAdapter placeAdapter = new PlaceAdapter(getContext(), 0, placesList, new MyOnItemClickListener() {
+        PlaceAdapter placeAdapter = new PlaceAdapter(getContext(), 0, placesList);
+        listView.setAdapter(placeAdapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(int position) {
-                Intent i = new Intent(getContext(), PlaceActivity.class);
-                i.putExtra("Place", placesList.get(position));
-                startActivity(i);
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(getContext(), PlaceActivity.class);
+                intent.putExtra("Place", placesList.get(i));
+                startActivity(intent);
             }
         });
-        listView.setAdapter(placeAdapter);
-
         return rootView;
     }
 
